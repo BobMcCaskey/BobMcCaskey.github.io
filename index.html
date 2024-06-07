@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h1>Hello From Github Pages!</h1>
-    <p>Under Construction</p>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>Restaurant Picker</title>
+    </head>
+    <body>
+        <h1>My Restaurant Picker</h1>
+        <p>Here is our list of Restaurants:</p>
+        <p id="demo1"></p>
+        <h2>The random selection is:</h2>       
+        
+        <p id="demo2"></p>
+        <script>
+            const spot = [];
+            spot[0]="Olive Garden";
+            spot[1]="Longhorn";
+            spot[2]="Beef OBradys";
+            spot[3]="Outback";
+            spot[4]="Bacon Street Diner";
+            spot[5]="Chilis";
+            spot[6]="Applebees";
+            spot[7]="Amarit Thai";
+            spot[8]="BJs Brew House";
+            spot[9]="PF Changs";
+            spot[10]="Carabas";
+            spot[11]="Pablanos";
+            spot[12]="Cheesecake Factory";
+            spot[13]="Buffalo Wild Wings";
+            spot[14]="Ginos";
+            spot[15]="Shaker n Peel";
+            spot[16]="Craft Street";
+            spot[17]="Tampabay Brewing Company";
+            spot[18]="Sonnys BBQ";
+
+            let text = "";
+            for (let i = 0; i < spot.length; i++) {
+                text += spot[i] + "<br>";
+            } 
+            
+            document.getElementById("demo1").innerHTML = text;
+
+            var s = Math.floor(Math.random() * 19);
+
+            document.getElementById("demo2").innerHTML = spot[s];
+        </script>
+    </body>
 </html>
