@@ -8,6 +8,7 @@
         <h1>My Restaurant Picker</h1>
         <p>Here is our list of Restaurants:</p>
         <p id="demo1"></p>
+        <button onclick="choose(spot.length)">Click for Random Choice</button>
         <h2>The random selection is:</h2>       
         
         <p id="demo2"></p>
@@ -37,12 +38,12 @@
             for (let i = 0; i < spot.length; i++) {
                 text += spot[i] + "<br>";
             } 
-            
             document.getElementById("demo1").innerHTML = text;
 
-            var s = Math.floor(Math.random() * 19);
-
-            document.getElementById("demo2").innerHTML = spot[s];
+            function choose(n1) {
+                let s = Math.floor(Math.random() * n1);
+                document.getElementById("demo2").innerHTML = spot[s];
+            } 
         </script>
     </body>
 </html>
